@@ -36,7 +36,7 @@ window.onload=function(){
 		css=document.getElementById("css"),
 		js=document.getElementById("js"),
 		output=document.getElementById("output"),
-		working=false;
+		working=false,
 		fill=function(){
 			if(working){
 				return false;
@@ -46,8 +46,7 @@ window.onload=function(){
 				style=document.createElement("style"),
 				script=document.createElement("script");
 			document.body.innerHTML=html.textContent;
-			style.innerHTML=css.textContent.replace(/\s/g,'');
-			console.log(style.innerHTML)
+			style.innerHTML=css.textContent.replace(/\s/g,"");
 			script.innerHTML=js.textContent;
 			document.body.appendChild(style);
 			document.body.appendChild(script);
